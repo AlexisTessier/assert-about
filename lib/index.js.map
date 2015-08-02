@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;AAAA,SAAS,KAAK,CAAE,KAAK,EAAE,EACtB;;qBAEc,KAAK","file":"index.js","sourcesContent":["function about (topic) {\r\n}\r\n\r\nexport default about;"],"sourceRoot":"/source/"}

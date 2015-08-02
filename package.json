@@ -1,0 +1,47 @@
+{
+  "name": "assert-about",
+  "version": "0.0.1",
+  "description": "A modular assertion library",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover specifications/test && karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisTessier/assert-about.git"
+  },
+  "keywords": [
+    "vibrato",
+    "assertion",
+    "test",
+    "about",
+    "isomorphic"
+  ],
+  "author": "Alexis Tessier <alexis.tessier@designdo.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexisTessier/assert-about/issues"
+  },
+  "homepage": "https://github.com/AlexisTessier/assert-about#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.2.4",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.2",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-sauce-launcher": "^0.2.14",
+    "source-map-support": "^0.3.2"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.7.0",
+    "chalk": "^1.1.0",
+    "lodash": "^3.10.0"
+  }
+}
