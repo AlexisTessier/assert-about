@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/AlexisTessier/assert-about/badge.svg?branch=master&service=github)](https://coveralls.io/github/AlexisTessier/assert-about?branch=master)
 [![Build Status](https://travis-ci.org/AlexisTessier/assert-about.svg?branch=master)](https://travis-ci.org/AlexisTessier/assert-about)
 
 Assert About
@@ -26,7 +27,56 @@ Install
 How to use
 ----------
 
-[See the draft](https://github.com/AlexisTessier/assert-about//blob/master/draft.js)
+#####Plugin Usage
+
+```javascript
+var about = require('assert-about');
+
+//require a plugin
+var aboutString = require('assert-about-string');
+var aboutNumber = require('assert-about-number');
+
+about
+	.plug(aboutString)
+	.plug(aboutNumber)
+
+//Now you can use the assertions defined in these two plugins
+//Even in other modules
+
+about("A string")
+	("It's a string")
+	("It's longer than", 5)
+
+//Or be more explicit and avoid possible conflicts between plugins assertions
+about.number(12)
+	("It's greater than", 6)
+```
+
+#####Basic Usage
+
+```javascript
+var assert = require('assert');
+
+var about = require('assert-about');
+
+about("my string")
+	("It's a string", function (topic) {
+		console.log(topic); // my string
+
+		assert.strictEqual(typeof topic, "string");
+	})
+
+	("It contains", "string", function (topic, content) {
+		console.log(content); // string
+
+		assert.strictEqual(topic.indexOf(content) > -1, true);
+	})
+
+about(42)
+	("It's the answer...", function (topic){
+
+	})
+```
 
 Documentation
 -------------

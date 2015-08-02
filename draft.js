@@ -36,7 +36,9 @@ aboutTypeOf.addAssertion("It's an object", function(topic) {
 //-----------------------------
 var aboutString = about.create.plugin("string");
 
-aboutString.plug(aboutTypeOf);
+aboutString.plug(aboutTypeOf, [
+	"It's a string" //This aboutTypeOf assertion will be accesible even if aboutTypeOf is not pluged
+]);
 
 aboutString.addDefaultAssertion(function(topic) {
 	aboutString(topic)
