@@ -26,6 +26,7 @@ Install
 How to use
 ----------
 
+[See the draft](https://github.com/AlexisTessier/assert-about//blob/master/draft.js)
 
 Documentation
 -------------
