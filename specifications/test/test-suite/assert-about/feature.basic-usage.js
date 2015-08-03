@@ -60,11 +60,27 @@ var feature = function basicUsage(resources) {
 	})
 
 	.scenario("Accessing to a single argument", function (trace) {
+		var originalArg = 12, retrievedArg = null;
 
+		about("something")
+			("retrieve Arg", originalArg, function(topic, arg) {
+				retrievedArg = arg;
+			})
+
+		assert.strictEqual(retrievedArg, originalArg, trace("The args in testBlock function should be the same as args defined with about function"))
 	})
 
 	.scenario("Accessing to multiple arguments", function (trace) {
+		var originalArg = 12, retrievedArg = null,
+			originalArg2 = 15, retrievedArg2 = null;
 
+		about("something")
+			("retrieve Arg", originalArg, originalArg2, function(topic, arg, arg2) {
+				retrievedArg = arg;
+				retrievedArg2 = arg2;
+			})
+
+		assert.strictEqual(retrievedArg, originalArg, trace("The args in testBlock function should be the same as args defined with about function"))
 	})
 
 	.scenario("Chaining multiple assertions", function (trace) {

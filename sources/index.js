@@ -3,18 +3,10 @@ var _ = require('lodash');
 function about (topic) {
 	var assertionSetter;
 
-	assertionSetter = function assertionSetter(assertion, args, testBlock) {
-		var testBlock = _.isFunction(testBlock) ? testBlock : null;
-		var argsIsActuallyTheTestBlock = false;
+	assertionSetter = function assertionSetter(assertion, ...args) {
+		var lastArgs = _.last(args);
 
-		if (!testBlock) {
-			argsIsActuallyTheTestBlock = _.isFunction(args);
-		}
-
-		testBlock = argsIsActuallyTheTestBlock ? args : testBlock;
-
-		var args = argsIsActuallyTheTestBlock ? [] : args;
-		args = _.isArray(args) ? args : [args];
+		var testBlock = _.isFunction(lastArgs) ? args.pop() : null;
 
 		args.unshift(topic);
 

@@ -41,7 +41,7 @@ aboutString.plug(aboutTypeOf, [
 ]);
 
 aboutString.addDefaultAssertion(function(topic) {
-	aboutString(topic)
+	this.about(topic)
 		("It's a string")
 });
 
@@ -114,3 +114,28 @@ about.list(["this", "is", "a", "list", "or", "an", "Array"])
 //The following example throw an error because the plugin instanceOf is not used
 about("something")
 	("It's an instance of", String)
+
+//Asyncronous assertions
+var aboutUrl = about.create.plugin('url');
+
+var Browser = require('zombie');
+
+aboutUrl.plug(aboutString);
+
+aboutUrl.addAssertion("It's an url", function(topic) {
+	aboutUrl(topic)
+		("It's a string")
+		("It match the patterns", urlPattern)
+});
+
+aboutUrl.addDefaultAssertion(["It's an url"])
+
+aboutUrl.addAsyncAssertion("It opens", function(topic, done) {
+	var browser = new Browser();
+	browser.visit(topic, done);
+});
+
+//------------------------>
+
+about.url("https://fr.wikipedia.org/wiki/Tortue")
+	("It opens")
