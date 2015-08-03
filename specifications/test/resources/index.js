@@ -3,7 +3,7 @@
 require('./console-hack');
 
 var resources = {
-	VibratoBDD : require('../../../index'),
+	assertAbout : require('../../../index'),
 	testSuite :  require('./test-suite-manager'),
 	specifications : require('../../index'),
 	notAFunctionList : require('./not-a-function-list'),
