@@ -15,7 +15,7 @@ gulp.task('babel', function (done) {
 	gulp.src(watchTargetGlob)
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
-		.pipe(babel({ optional: ["runtime"] }))
+		.pipe(babel({optional: ["runtime"] }))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('lib/'))
 
