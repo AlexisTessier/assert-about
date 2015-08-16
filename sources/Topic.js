@@ -5,14 +5,16 @@ var createAssertionLauncher = Symbol();
 var createAssertionSuite = Symbol();
 var assertionSuite = Symbol();
 var launchNextAssertionGenerator = Symbol();
+var launchNextAssertionIterator = Symbol();
 var launchNextAssertion = Symbol();
+var assertionList = Symbol();
 
 class Topic {
 	constructor({value}) {
 		
 		this.value = value;
-		this.assertionList = [];
 
+		this[assertionList] = [];
 		this[launchNextAssertionGenerator] = function*(self){
 			for(var i=0,imax = self[assertionSuite].length;i<imax;i++){
 				yield self[assertionSuite][i];
@@ -21,7 +23,7 @@ class Topic {
 	}
 
 	addAssertion(name, testBlock, args){
-		this.assertionList.push({
+		this[assertionList].push({
 			name,
 			testBlock,
 			args
@@ -34,37 +36,51 @@ class Topic {
 	}
 
 	[launchNextAssertion](){
-		this[launchNextAssertionGenerator](this)._invoke().value.then(()=>{
-			this.launchNextAssertion();
-		})
+		if (!this[launchNextAssertionIterator]) {
+			this[launchNextAssertionIterator] = this[launchNextAssertionGenerator](this);
+		}
+
+		var next = this[launchNextAssertionIterator].next().value;
+
+		delete this.assert;
+
+		if (_.isFunction(next)) {
+			next(function(assertFunc) {
+				var topic = this.args.shift();
+
+				try{
+					assertFunc();
+				}
+				catch(e){
+					e.message = "One of your assertion about "+topic.value+" is not correct :";
+					e.message += "\n\t"+this.name+" ";
+					e.message += this.args.join(', ');
+	
+					throw e;
+				}
+
+				topic[launchNextAssertion]();
+			});
+		}
+		else{
+			console.log("All your assertions about "+this.value+" are correct.");
+		}
 	}
 
 	[createAssertionSuite](){
 		this[assertionSuite] = [];
-		_.forEach(this.assertionList, (assertion) => {
+		_.forEach(this[assertionList], (assertion) => {
 			this[assertionSuite].push(this[createAssertionLauncher](assertion));
 		})
 	}
 
 	[createAssertionLauncher]({name, testBlock, args}){
-		return new Promise((resolve, reject)=> {
-			var message = "ok";
-			console.log(name);
-
-			try{
-				console.log(testBlock);
-				
-				testBlock(...args);
-				console.log("kjhkhj");
-			}
-			catch(e){
-				console.log(e);
-				message = e.message;
-				throw e;
-			}
-
-			message === "ok" ? resolve(message) : reject(message);
-		});
+		var self = this;
+		return function assertionLauncher(assertFunc) {
+			self.assert = assertFunc.bind({name, args});
+			args.unshift(self);
+			testBlock.call(self, ...args);
+		};
 	}
 }
 

@@ -1,3 +1,5 @@
+import 'babel/polyfill';
+
 var _ = require('lodash');
 
 var Topic = require('./Topic');
@@ -11,8 +13,6 @@ function about (topicValue) {
 		var lastArgs = _.last(args);
 
 		var testBlock = _.isFunction(lastArgs) ? args.pop() : null;
-
-		args.unshift(topic);
 
 		topic.addAssertion(assertion, testBlock, args);
 
@@ -29,7 +29,6 @@ function about (topicValue) {
 
 /*-------------------------------------------------*/
 function createFunction (argument) {
-	// body...
 }
 
 export default about;
