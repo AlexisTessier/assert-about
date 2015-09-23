@@ -27,56 +27,7 @@ Install
 How to use
 ----------
 
-#####Plugin Usage
-
-```javascript
-var about = require('assert-about');
-
-//require a plugin
-var aboutString = require('assert-about-string');
-var aboutNumber = require('assert-about-number');
-
-about
-	.plug(aboutString)
-	.plug(aboutNumber)
-
-//Now you can use the assertions defined in these two plugins
-//Even in other modules
-
-about("A string")
-	("It's a string")
-	("It's longer than", 5)
-
-//Or be more explicit and avoid possible conflicts between plugins assertions
-about.number(12)
-	("It's greater than", 6)
-```
-
-#####Basic Usage
-
-```javascript
-var assert = require('assert');
-
-var about = require('assert-about');
-
-about("my string")
-	("It's a string", function (topic) {
-		console.log(topic); // my string
-
-		assert.strictEqual(typeof topic, "string");
-	})
-
-	("It contains", "string", function (topic, content) {
-		console.log(content); // string
-
-		assert.strictEqual(topic.indexOf(content) > -1, true);
-	})
-
-about(42)
-	("It's the answer...", function (topic){
-
-	})
-```
+	Work in progress
 
 Documentation
 -------------

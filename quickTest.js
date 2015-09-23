@@ -1,9 +1,29 @@
-require('source-map-support').install();
+//require('source-map-support').install();
 
-var about = require('./index');
+//var about = require('./index');
 var assert = require('assert');
 
-var temp = about(15)
+function assertThrow(block, catched) {
+	try{
+		block();
+	}
+	catch(e){
+		assert.strictEqual(e, catched);
+	}
+}
+
+assertThrow(function () {
+	throw 8;
+}, 8);
+
+assert.doesNotThrow(
+  function() {
+  	console.log("kjh")
+  },
+  EvalError
+);
+
+/*var temp = about(15)
 	("it's equal to", "15", function(topic, compare) {
 		setTimeout(function() {
 			topic.assert(function(){
@@ -17,4 +37,4 @@ var temp = about(15)
 			assert.notEqual(topic.value, compare);
 		});
 	})
-	.assert();
+	.assert();*/
