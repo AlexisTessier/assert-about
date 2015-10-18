@@ -12,7 +12,7 @@ Assert About
 [![Features in Test](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Test&title=Feature%20test)](http://waffle.io/AlexisTessier/assert-about)
 [![Features in Ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Ready&title=Feature%20ready)](http://waffle.io/AlexisTessier/assert-about)
 
-I use this README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) as a guideline to write my specs.
+This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) are used as specs.
 
 About
 -----
