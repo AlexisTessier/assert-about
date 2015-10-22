@@ -6,13 +6,15 @@ Assert About
 
 ![Project Status : work in progress](https://img.shields.io/badge/Project%20status-work%20in%20progress-lightgrey.svg)
 
-[![Features in Draft](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Draft&title=Feature%20draft)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Specs](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Specs&title=Feature%20specs)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Scenario](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Scenario&title=Feature%20scenario)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Test](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Test&title=Feature%20test)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=Ready&title=Feature%20ready)](http://waffle.io/AlexisTessier/assert-about)
-
 This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) are used as specs.
+
+#####Features progress
+
+[![Features in Draft](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20draft&title=draft)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in Specs](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20wiki%20and%20specs%20stable&title=specs)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in Scenarios](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20usage%20scenarios%20written&title=scenario written)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in Tests](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20tests%20written&title=test written)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in Ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20ready&title=ready)](http://waffle.io/AlexisTessier/assert-about)
 
 About
 -----
