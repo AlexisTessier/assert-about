@@ -1,10 +1,6 @@
+![Project Status : work in progress](https://img.shields.io/badge/Project%20status-work%20in%20progress-lightgrey.svg)
 [![Coverage Status](https://coveralls.io/repos/AlexisTessier/assert-about/badge.svg?branch=master&service=github)](https://coveralls.io/github/AlexisTessier/assert-about?branch=master)
 [![Build Status](https://travis-ci.org/AlexisTessier/assert-about.svg?branch=master)](https://travis-ci.org/AlexisTessier/assert-about)
-
-Assert About
-============
-
-![Project Status : work in progress](https://img.shields.io/badge/Project%20status-work%20in%20progress-lightgrey.svg)
 
 This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) are used as specs.
 
@@ -16,10 +12,10 @@ This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) a
 [![Features in Tests](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20tests%20written&title=test written)](http://waffle.io/AlexisTessier/assert-about)
 [![Features in Ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20ready&title=ready)](http://waffle.io/AlexisTessier/assert-about)
 
-About
------
+Assert About
+============
 
-A modular assertion library.
+Assert abour is a modular assertion library.
 
 Install
 -------
