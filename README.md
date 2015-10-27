@@ -6,11 +6,12 @@ This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) a
 
 #####Features progress
 
-[![Features in Draft](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20draft&title=draft)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Specs](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20wiki%20and%20specs%20stable&title=specs)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Scenarios](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20usage%20scenarios%20written&title=scenario written)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Tests](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20tests%20written&title=test written)](http://waffle.io/AlexisTessier/assert-about)
-[![Features in Ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%20%3A%20ready&title=ready)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in draft](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%200%3A%20draft&title=draft)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in wiki](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%201%3A%20wiki&title=wiki)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in scenarios](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%202%3A%20scenarios&title=scenarios)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in tests](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%203%3A%20tests&title=tests)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in implementation](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%204%3A%20implementation&title=implementation)](http://waffle.io/AlexisTessier/assert-about)
+[![Features in ready](https://badge.waffle.io/AlexisTessier/assert-about.svg?label=progress%20status%205%3A%20ready&title=ready)](http://waffle.io/AlexisTessier/assert-about)
 
 Assert About
 ============
