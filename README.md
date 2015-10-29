@@ -16,7 +16,7 @@ This README and the [wiki](https://github.com/AlexisTessier/assert-about/wiki) a
 Assert About
 ============
 
-Assert abour is a modular assertion library.
+Assert about is a modular assertion library.
 
 Install
 -------
